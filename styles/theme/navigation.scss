@@ -1,0 +1,20 @@
+.navigation {
+  width: 855px;
+  background: white;
+  padding: 15px 40px;
+}
+
+.navigation a {
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: #213f4a;
+  background: #f7f7f9;
+}
+
+.navigation .active {
+  font-weight: bold;
+}

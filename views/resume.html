@@ -1,0 +1,143 @@
+{% extends "layouts/main.html" %}
+{% set title = l10n.resume.title %}
+{% set page = 'resume' %}
+
+{% block head %}
+<link rel="stylesheet" href="styles/resume.css">
+<link rel="stylesheet" href="styles/resume.css">
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="scripts/resume.js"></script>
+{% endblock %}
+
+{% block navigation %}
+  <a href="javascript:" data-action="print">
+  <i class="fa fa-print"></i>
+  <span>{{ l10n.shared.print }}</span>
+  </a>
+{% endblock %}
+
+{% block content %}
+<div class="panel page resume">
+
+  <div class="resume-main">
+    <h1>{{ l10n.resume.name }}</h1>
+
+    <p>
+      <span>{{ l10n.resume.specialty }}</span>
+      <br/>
+      <span>{{ l10n.resume.age }}</span>
+      <br/>
+      <span>{{ l10n.resume.experience }}</span>
+      <br/>
+      <span>{{ l10n.resume.city }}</span>
+    </p>
+
+    <h2>{{ l10n.resume.skills_title }}</h2>
+    <div class="text-block-row">
+      <div class="text-block">
+      {% for group in skills.left %}
+        <h3>{{ group.group }}</h3>
+
+        {% for subgroup in group.items %}
+          <span class="skills-title">{{ subgroup.subgroup }}</span>
+          <ul>
+          {% for skill in subgroup.items %}
+            <li>{{ skill.skill }} <span class="skill-level level-{{ skill.level }}"></span></li>
+          {% endfor %}
+          </ul>
+        {% endfor %}
+      {% endfor %}
+      </div>
+
+      <div class="text-block">
+      {% for group in skills.right %}
+        <h3>{{ group.group }}</h3>
+        <ul class="skills-title">
+        {% for skill in group.items %}
+          <li>{{ skill.skill }}</li>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+      </div>
+    </div>
+    <div class="clear"></div>
+
+    <h2>{{ l10n.resume.employment_title }}</h2>
+    {% for row in employment %}
+    <div class="text-block-row">
+      {% for empl in row %}
+        <div class="text-block">
+          <h3>
+            {{empl.company}}
+            {% if empl.link %}
+              <a href="{{empl.link.href}}" target="_blank">{{empl.link.text}}</a>
+            {% endif %}
+          </h3>
+          <h4>{{empl.position}}</h4>
+          <span>{{empl.period}}</span>
+          <p class="text-small">
+            {% for item in empl.items %}
+            › {{item}}
+            <br/>
+            {% endfor %}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="clear"></div>
+    {% endfor %}
+
+    <h2>{{ l10n.resume.education_title }}</h2>
+    {% for row in education %}
+    <div class="text-block-row">
+      {% for edc in row %}
+        <div class="text-block">
+          <h3>{{ edc.title }}</h3>
+          <h4>{{ edc.subtitle }}</h4>
+          <span>{{ edc.period }}</span>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="clear"></div>
+    {% endfor %}
+
+    <div class="resume-footer">
+      <span>* {{ l10n.resume.skills_notice }}<span/>
+    </div>
+  </div>
+
+  <div class="resume-rpanel">
+    <img src="images/avatar-big.jpg" />
+
+    <div class="content">
+
+      <h3>{{ l10n.resume.contacts_title }}</h3>
+
+      <span class="contact">
+        <i class="fa fa-building"></i>
+        <span>{{ l10n.resume.country }}</span>
+      </span>
+
+      <span class="contact">
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:avalarin@gmail.com">avalarin@gmail.com</a>
+      </span>
+      <span class="contact">
+        <i class="fa fa-phone"></i>
+        <a href="tel:+77078192027">+7 707 819 20 27</a>
+      </span>
+      <span class="contact">
+        <i class="fa fa-github"></i>
+        <a href="https://github.com/avalarin">avalarin</a>
+      </span>
+      <span class="contact">
+        <i class="fa fa-globe"></i>
+        <a href="http://about.avalarin.net">about.avalarin.net</a>
+      </span>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

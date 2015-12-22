@@ -1,0 +1,53 @@
+* {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #EEEEEE;
+  color: #333;
+  padding: 25px 45px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: $font-size-h1;
+  color: #213f4a;
+}
+
+h2 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: $font-size-h2;
+  color: #213f4a;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  font-weight: normal;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+a, a:visited {
+  color: #464646;
+}
+
+p {
+  margin: 8px 0 0 0;
+}
+
+.clear {
+   clear: both;
+}

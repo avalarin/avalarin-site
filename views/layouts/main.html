@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>{{ title }}</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin,cyrillic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="styles/site.css">
+  {% block head %}{% endblock %}
+  </head>
+  <body data-lang="{{ l10n.lang }}">
+  <a class="github-link" href="https://github.com/avalarin/avalarin-site" title="{{ l10n.shared.sources_on_githib }}" target="_blank">
+    <i class="fa fa-github fa-2x"></i>
+  </a>
+
+  <div class="panel navigation">
+    <a href="index.{{ l10n.lang }}.html" class="{{ 'active' if page == 'index' else '' }}">{{ l10n.shared.about_me }}</a>
+    <a href="resume.{{ l10n.lang }}.html" class="{{ 'active' if page == 'resume' else '' }}">{{ l10n.shared.resume }}</a>
+    <div class="pull-right">
+      {% block navigation %}{% endblock %}
+      <a href="{{ page }}.ru.html" class="{{ 'active' if l10n.lang == 'ru' else '' }}">Русский</a>
+      <a href="{{ page }}.en.html" class="{{ 'active' if l10n.lang == 'en' else '' }}">English</a>
+    </div>
+  </div>
+  {% block content %}{% endblock %}
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  {% block scripts %}{% endblock %}
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter33487578 = new Ya.Metrika({ id:33487578, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/33487578" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

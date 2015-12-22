@@ -1,0 +1,14 @@
+{% extends "layouts/main.html" %}
+{% set title = l10n.index.title %}
+{% set page = 'index' %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<div class="panel page">
+  <span>{{ l10n.index.notice }}</span>
+  <br/>
+  <a href="resume.{{l10n.lang}}.html">{{ l10n.index.go_to_resume }} </a>
+</div>
+{% endblock %}

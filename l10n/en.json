@@ -1,0 +1,86 @@
+{
+  "lang": "en",
+  "shared": {
+    "about_me": "About me",
+    "resume": "Resume",
+    "sources_on_githib": "Sources on the GitHub",
+    "print": "Print"
+  },
+  "index": {
+    "title": "About me",
+    "notice": "This page is not ready yet",
+    "go_to_resume": "Go to the resume"
+  },
+  "resume": {
+    "title": "Resume",
+    "skills_title": "Skills",
+    "skills_notice": "This skill levels are not an absolute assessment of knowledge",
+    "employment_title": "Employment",
+    "education_title": "Education",
+    "contacts_title": "Contacts",
+
+    "name": "Prokopyev Alexander",
+    "specialty": ".Net Developer",
+    "age": "22 years old (15 March 1993)",
+    "experience": "Work experience 5 years",
+    "city": "Almaty, willing to relocate",
+    "country": "Almaty, Kazakhstan",
+
+    "skills": {
+      "job_related": "Job-Related *",
+
+      "transferable": "Transferable",
+      "creativity": "Creativity",
+      "punctual": "Punctual",
+      "helpful": "Helpful",
+
+      "languages": "Languages",
+      "russian_lang": "Russian - native",
+      "english_lang": "English - can read professional literature"
+    },
+
+    "employment": [
+      {
+        "company": "QIWI Kazakhstan",
+        "link": { "href": "http://w.qiwi.com", "text": "qiwi.com" },
+        "position": "Senior .Net Developer",
+        "period": "Oct 2015 - now",
+        "items": [
+          "Managing development team",
+          "Developing services development for interaction with banks (.Net)",
+          "Developing self service kiosk interface (HTML, JS, СSS)",
+          "Working closely with partners developers"
+        ]
+      },
+      {
+        "company": "QIWI Kazakhstan",
+        "link": { "href": "http://w.qiwi.com", "text": "qiwi.com" },
+        "position": ".Net Developer",
+        "period": "Sep 2011 - Oct 2015",
+        "items": [
+          "Developing web and desktop applications for the needs of the company (.Net)",
+          "Developing issue tracking system (.Net)",
+          "Maintenance of existing software (.Net, Ruby on Rails and PHP)",
+          "Working closely with partners developers"
+        ]
+      },
+      {
+        "company": "VG Service",
+        "position": "IT Specialist",
+        "period": "Feb 2010 - Sep 2011",
+        "items": [
+          "Maintenance and installation of computer systems",
+          "Training staff to work with MS Office, Windows and other software"
+        ]
+      }
+    ],
+
+    "education": [
+      {
+        "title": "Moscow Technological Institute",
+        "subtitle": "Information Science and Automation",
+        "period": "Nov 2012 - May 2017"
+      }
+    ]
+  }
+}

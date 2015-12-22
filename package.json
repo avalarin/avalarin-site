@@ -1,0 +1,26 @@
+{
+  "name": "avalarin-site",
+  "version": "0.0.1",
+  "description": "",
+  "author": "avalarin <avalarin@gmail.com>",
+  "main" : "server/app.js",
+  "contributors": [],
+  "dependencies": {
+    "express": "*",
+    "request": "*"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-sass": "*",
+    "gulp-copy": "*",
+    "gulp-sass": "*",
+    "gulp-data": "*",
+    "gulp-jade": "*",
+    "gulp-nunjucks-html": "*",
+    "gulp-rename": "*",
+    "gulp-util": "*",
+    "through2": "*",
+    "nunjucks": "*",
+    "object-assign": "*"
+  }
+}
