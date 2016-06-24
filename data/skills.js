@@ -15,20 +15,22 @@ module.exports = function(l10n) {
           { skill: 'WPF', level: 3 },
           { skill: 'WCF', level: 3 }
         ] },
+        { subgroup: 'Server development', items: [
+          { skill: 'Node.js', level: 3 },
+          { skill: 'Ruby/Rails', level: 3 }
+        ] },
         { subgroup: 'Web development', items: [
           { skill: 'Javascipt', level: 4 },
           { skill: 'CSS (LESS, SCSS)', level: 4 }
         ] },
         { subgroup: 'Database development', items: [
           { skill: 'MS SQL Server', level: 4 },
-          { skill: 'PostgreSQL', level: 3 }
+          { skill: 'PostgreSQL', level: 3 },
+          { skill: 'MongoDB', level: 3 }
         ] },
         { subgroup: 'Version control systems', items: [
           { skill: 'Git', level: 5 },
           { skill: 'SVN', level: 4 }
-        ] },
-        { subgroup: 'Ruby', items: [
-          { skill: 'Ruby on Rails', level: 3 }
         ] },
         { subgroup: 'General', items: [
           { skill: 'SOLID', level: 4 },
